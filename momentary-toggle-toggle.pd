@@ -1,0 +1,90 @@
+#N canvas 0 37 1440 898.969 12;
+#X obj 150 230 spigot, f 7;
+#X obj 50 10 inlet;
+#X obj -40 460 outlet, f 7;
+#X obj -40 230 spigot, f 7;
+#X obj 90 150 == 0;
+#X floatatom 50 120 5 0 0 0 - - -, f 5;
+#X msg -80 80 0;
+#X text 130 80 Toggle;
+#X obj 100 80 tgl 20 0 empty empty empty 0 0 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 290 50 sel 1;
+#X msg 240 110 color \$1;
+#X obj 320 80 i \$2;
+#X obj 260 80 i \$1;
+#X msg 320 110 color \$1;
+#X floatatom 150 180 2 0 0 0 - - -, f 2;
+#X floatatom 40 180 2 0 0 0 - - -, f 2;
+#X obj 150 10 loadbang;
+#X msg -40 80 1;
+#X floatatom 160 340 5 0 0 0 - - -, f 5;
+#X obj 100 340 sel 0;
+#X msg 0 80 127;
+#X msg 150 40 0;
+#X floatatom -40 420 5 0 0 0 - - -, f 5;
+#X obj 150 270 sel 0;
+#X msg 50 340 0;
+#X msg 50 280 0;
+#X text 60 180 Toggle State;
+#X text 200 270 Ignore Zeros;
+#X text -20 260 Reset on func change;
+#X text 250 140 Toggle Highligting;
+#X text -110 220 Momentary, f 13;
+#X text 100 220 Toggle, f 13;
+#X text -80 60 Test values;
+#X text 50 370 Flip Flop \; On repetatitous non-zero values \, alternate
+between the value and zero as output.;
+#X text -150 -450 momentary-toggle-toggle \; -----------------------
+\;  \; Momentary - Toggle Toggle V1.0.0 \;  \; This 'graph-on-parent'
+patch came from the need to take MIDI button presses (momentary) and
+get toggle switch behavior (on/off) \, and to be able to switch between
+behaviours. \;  \; Inlet values are passed to the Outlet directly
+in 'Momentary' mode. In 'Toggle' mode \, When the Toggle toggle is
+toggled \, Zero is output if the same consecutive non-zero number is
+input twice. Otherwise you get the non-zero number. \;  \; The patch
+has a canvas for the Toggle toggle and takes two arguments - colours
+to highlight Canvas when the toggle is on/off. \;  \;  \; Copyright
+2022 technosf [https://github.com/technosf] \;  \; Licensed under
+the Apache License \, Version 2 (the "License") \; you may not use
+this file except in compliance with the License. You may obtain a copy
+of the License at \;  \; http://www.apache.org/licenses/LICENSE-2.0
+\;  \; Unless required by applicable law or agreed to in writing
+\, software distributed under the License is distributed on an "AS
+IS" BASIS \, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND \, either
+express or implied. See the License for the specific language governing
+permissions and limitations under the License., f 90;
+#X connect 0 0 23 0;
+#X connect 1 0 5 0;
+#X connect 3 0 22 0;
+#X connect 4 0 15 0;
+#X connect 4 0 25 0;
+#X connect 5 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 8 0 4 0;
+#X connect 8 0 9 0;
+#X connect 8 0 14 0;
+#X connect 9 0 12 0;
+#X connect 9 1 11 0;
+#X connect 10 0 8 0;
+#X connect 11 0 13 0;
+#X connect 12 0 10 0;
+#X connect 13 0 8 0;
+#X connect 14 0 0 1;
+#X connect 15 0 3 1;
+#X connect 16 0 21 0;
+#X connect 17 0 5 0;
+#X connect 18 0 19 1;
+#X connect 19 0 24 0;
+#X connect 19 1 18 0;
+#X connect 19 1 22 0;
+#X connect 20 0 5 0;
+#X connect 21 0 8 0;
+#X connect 22 0 2 0;
+#X connect 23 1 19 0;
+#X connect 24 0 19 0;
+#X connect 25 0 22 0;
+#X connect 25 0 19 1;
+#X coords 0 -1 1 1 20 20 2 100 80;
+#X scroll 1;
