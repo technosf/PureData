@@ -10,5 +10,6 @@ Inlet values are passed to the Outlet directly in 'Momentary' mode. In 'Toggle' 
 
 <img src="/doc/mtt1.gif" width="250" /> <img src="/doc/mtt2.gif" width="250" /> <img src="/doc/mtt3.gif" width="250" />
 
-Inputs: Value (float), External toggle (toggle)
-Outputs: Value (float), External toggle colour message
+*Inputs*: Value (float), External toggle (toggle)
+
+*Outputs*: Value (float), External toggle colour message
